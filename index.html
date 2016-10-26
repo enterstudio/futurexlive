@@ -1,13 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
+
+		<title>Democratizing Augmented Reality</title>
+
+		<meta name="description" content="Argon Presentation for FutureX">
+		<meta name="author" content="Blair MacIntyre">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/argon.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,31 +28,382 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script src="resources/js/aframe.js"></script>
+		<script src="resources/js/argon.js"></script>
+		<script src="resources/js/argon-aframe.js"></script>
+		<script src="resources/js/CSS3DArgonRenderer.js"></script>
+		<script src="resources/js/CSS3DArgonHUD.js"></script>
+		<script src="resources/js/aframe-look-at-component.js"></script>
+		<script src="index-argon.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="resources/style.css">
+	    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
 	</head>
+
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" data-background="transparent">
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h1>Democratizing Augmented Reality</h1>
+					<h3>Bring AR to the Web, and to the World</h3>
+					<p>
+						<small><a href="http://blairmacintyre.me">Blair MacIntyre</a> / <a href="http://twitter.com/blairmacintyre">@blairmacintyre</a></small> <br>
+						<small><a href="http://imtc.gatech.edu/people/maribeth-gandy-coleman-phd">Maribeth Gandy Coleman</a> / <a href="http://twitter.com/maribethgandy">@maribethgandy</a></small>
+					</p>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>Democratizing a Technology</h2>
+					<blockquote cite="https://en.wikipedia.org/wiki/Democratization_of_technology">
+Democratization of technology refers to the process by which access to technology rapidly continues to become more accessible to more people. New technologies and improved user experiences have empowered those outside of the technical industry to access and use technological products and services. At an increasing scale, consumers have greater access to use and purchase technologically sophisticated products, as well as to participate meaningfully in the development of these products. <em>(Wikipedia)</em> 
+					</blockquote>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>Creating Technology is The First Step</h2>
+					<p>But then you need to make it</p>
+					<p><em>widely available</em></p>
+					<p><em>easy to use</em></p>
+					<p><em>easy to create</em></p>
+					<p><em>easy to share or publish</em></p>
+				</section>
+
+				<section data-background="resources/textures/HDP-eyes.png">
+					<h2>Political Activism: Hack De Patria (HDP)</h2>
+					<blockquote style="background: rgba(32, 32, 32, 0.5);" cite="http://motherboard.vice.com/read/augmented-reality-hack-de-patria-app-venezuela">
+						&ldquo;activists and political operators will have to make the augmented reality experience easy to use, even for non-tech savvy folks—and not dorky. Let the political augmented reality games begin.&rdquo;
+					</blockquote>
+					<small><a href="http://motherboard.vice.com/read/augmented-reality-hack-de-patria-app-venezuela">http://motherboard.vice.com/read/augmented-reality-hack-de-patria-app-venezuela</a></small>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>AR is awesome</h2>
+					<p>Becoming more widely available</p>
+					<p>Many people are dreaming up ways to use it</p>
+					<p><br></p>
+					<p>
+						<span class="fragment"><i>But the technology is still hard to use</i></span> 
+					</p>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>The Web is Awesome, too</h2>
+					<p>
+						Lots of people already use it
+					</p>
+					<p><br></p>
+					<p class="fragment">The web democratized media creation and distribution,<br>
+					without constraints of <i>apps</i> or<br> the rules of the ecosystem <i>gatekeepers</i><p>
+					</p>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>AR + Web: Democratizing AR</h2>
+					<p>
+						Create AR content using web technologies
+					</p>
+					<p>argon.js brings AR to the web, leverages the<br>
+					Argon4 AR-enabled web browser for iOS</p>
+					<p><a href="http://argonjs.io">http://argonjs.io</a></p>
+				</section>
+
+				<section data-state="argonslide">
+					<h2>This Presentation is Running in Argon4</h2>
+					<p><em>on an iPhone</em></p>
+					<p>Using argon.js + reveal.js + aframe.js + argon-aframe.js</p>
+				</section>
+
+				<section data-state="argonslide arstuff" style="text-align: left; top: 0px;">
+					<h2>Stuff around the room</h2>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</section>
+
+				<section data-state="argonslide geomarkers" style="text-align: left;">
+					<h2>Planetary scale geographic AR</h2>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</section>
+
+				<section data-state="argonslide vuforia" style="text-align: left;">
+					<h2>Computer vision AR w/ Vuforia</h2>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</section>
+
+
+				<!-- Example of nested vertical slides -->
+				<section data-background="rgba(32, 32, 32, 1)">
+					<section>
+						<h2>Added Argon to reveal.js Demo</h2>
+						<p>Add some new scripts up top</p>
+						<pre><code class="HTML" data-trim contenteditable>
+&lt;script src="resources/js/aframe.js"&gt; &lt;/script&gt; 
+&lt;script src="resources/js/argon.js"&gt; &lt;/script&gt; 
+&lt;script src="resources/js/argon-aframe.js"&gt; &lt;/script&gt; 
+						</code></pre>
+						<p>Add a simple AFrame scene down below</p>
+						<pre><code class="HTML" data-trim contenteditable>
+&lt;ar-scene&gt; 
+ ...
+&lt;/ar-scene&gt;
+						</code></pre>
+					 	<p>And adjust the CSS a bit, and we're done.</p>
+					</section>
+					<section data-background="rgba(32, 32, 32, 1)">
+						<h2>Simple Declarative 3D AR Content</h2>
+						<pre><code class="HTML" data-trim contenteditable>
+&lt;a-box position="0 3 -10" radius="0.25" color="gold" 
+       rotation="0 0 45"&gt;
+  &lt;a-animation attribute="rotation" from="0 0 45" to="0 360 45" 
+	       dur="1000" easing="ease-in-out" 
+	       repeat="indefinite"&gt;
+  &lt;/a-animation&gt;
+&lt;/a-box&gt;
+						</code></pre>
+						<p>A-Frame markup to create a spinning gold diamond</p>
+					</section>
+
+					<section data-background="rgba(32, 32, 32, 1)">
+						<h2>Geospatial frames of reference</h2>
+						<pre><code class="HTML" data-trim contenteditable>
+&lt;ar-geopose id="GT" lla="-84.394539 33.772501" userotation="false"&gt; 
+  &lt;a-entity fixedsize="20" billboard&gt;
+    &lt;a-plane rotation="0 0 0" width="2.9" height="4" src="#buzzpin" 
+             transparent="true" &gt;&lt;/a-plane&gt;
+    &lt;a-entity css-object="div: #gtdiv" scale="0.02 0.02 0.02" 
+        position="0 4 0" 
+        showdistance="Tech Tower @ GT&lt;br&gt;Atlanta, GA, USA&lt;br&gt;It is "&gt;
+    &lt;/a-entity&gt;
+  &lt;/a-entity&gt;
+&lt;/ar-geopose&gt;
+						</code></pre>
+						<p>A-Frame markup to put a pin at Georgia Tech</p>
+					</section>
+
+					<section data-background="rgba(32, 32, 32, 1)">
+						<h2>Simple Vuforia Setup and Use</h2>
+						<pre><code class="HTML" data-trim contenteditable>
+&lt;ar-scene vuforiakey="#vuforiakey"
+       vuforiadataset__stonesandchips="src:url(StonesAndChips.xml);"&gt;
+  &lt;a-assets&gt;
+    &lt;a-asset-item id="vuforiakey" src="key.txt"&gt;&lt;/a-asset-item&gt;
+  &lt;/a-assets&gt;
+
+  &lt;ar-frame id="frame" trackvisibility="true" visible="false"
+            parent="vuforia.stonesandchips.stones"&gt;
+		...
+  &lt;/ar-frame&gt;
+&lt;/ar-scene&gt;
+						</code></pre>
+						<p>A-Frame markup to put content on a visual target</p>
+					</section>
+
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>Approaching Democratization</h2>
+					<p>As AR technology appears in more web browsers, it will be</p>
+					<p><em>widely available</em></p>
+					<p><em>easy to use</em></p>
+					<p><em>easy to create</em></p>
+					<p><em>easy to share or publish</em></p>
+					<br>
+					<p>But this raises new question!</p>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)">
+					<h2>When, How, If to use AR?</h2>
+					<p>When should you use AR? </p>
+					<p>What makes for effective UI, presentation, etc?</p>
+					<p>What about VR? 360 video? Map mashups?</p>
+				</section>
+
+				<section data-background="rgba(32, 32, 32, 1)"  style="text-align: left;">
+					<h1>Try it yourself</h1>
+					<p>
+						- Download Argon4 for iOS<br>
+						- <a href="https://argonjs.io">http://argonjs.io</a>: argon.js source code, samples &amp; docs<br>
+						- <a href="https://aframe.io">http://aframe.io</a>: aframe.js source code, samples &amp; docs</a><br>
+						- twine editor at <a href="http://twinery.org">http://twinery.org</a><br>
+						- reveal.js source code &amp; docs on <a href="https://github.com/hakimel/reveal.js">hakimel's github</a>
+					</p>
+					<p>This presentation on <a href="http://blairmacintyre.me/reveal.js-argon.js">blairmacintyre.me/reveal.js-argon.js</a></p>
+				</section>
+
 			</div>
+
 		</div>
+
+    <div hidden>    
+      <div id="gtdiv" class="label">Georgia Tech</div>
+      <div id="londondiv" class="label">Tower of London</div>
+      <div id="tokyodiv" class="label">Tokyo</div>
+      <div id="sydneydiv" class="label">Sydney Opera House</div>
+      <div id="londonpin" class="pin"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+      <div id="tokyopin" class="pin"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+      <div id="sydneypin" class="pin"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+    </div>
+    <ar-scene vuforiakey="#vuforiakey"
+              vuforiadataset__stonesandchips="src:url(resources/datasets/StonesAndChips.xml);">
+      <a-assets>
+        <img id="buzzpin" src="resources/textures/buzz-pin.png">
+        <a-asset-item id="vuforiakey" src="key.txt"></a-asset-item>
+        <a-mixin id="light" geometry="primitive: sphere; radius: 1.5"
+                 material="color: #FFF; shader: flat"
+                 light="color: #DDDDFF; distance: 120; intensity: 2; type: point">
+        </a-mixin>
+        <a-mixin id="torus-knot" geometry="primitive: torusKnot"
+                 material="color: red"></a-mixin>
+      </a-assets>
+
+      <!-- attach to stones target. x/y in the plane, z up -->
+      <ar-frame id="frame" trackvisibility="true" visible="false" parent="vuforia.stonesandchips.stones" position="0 0 0" rotation="0 0 0">
+       <a-entity scale="0.003 0.003 0.003">
+        <a-entity id="stuff"></a-entity>
+
+        <!-- Lights. -->
+        <a-entity position="0 0 25">
+          <a-animation attribute="rotation" to="0 0 360"
+                      repeat="indefinite" easing="linear" dur="4096">
+          </a-animation>
+          <a-entity mixin="light" position="15 0 0"></a-entity>
+        </a-entity>
+
+        <a-entity position="0 0 25">
+          <a-animation attribute="rotation" to="360 0 0"
+                      repeat="indefinite" easing="linear" dur="4096">
+          </a-animation>
+          <a-entity mixin="light" position="0 0 25"></a-entity>
+        </a-entity>
+       </a-entity>
+      </ar-frame>      
+
+		  <ar-frame userotation=false parent="ar.user" id="arStuff" rotation="0 45 0" visible="false">
+			<a-box cursor-listener position="-7 0 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation" begin=200 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="-5 1 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=100 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="-2 -1 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=250 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="0 3 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=20 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="1 -0.5 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=180 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="2.5 1.5 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=60 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="3.5 -0.5 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=75 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+			<a-box cursor-listener position="6 1.5 -10" radius="0.25" color="gold" rotation="0 0 45">
+				<a-animation attribute="rotation"  begin=120 from="0 0 45" to="0 360 45" dur="1000" easing="ease-in-out" repeat="indefinite"></a-animation>
+			</a-box>
+		</ar-frame>
+
+		<ar-camera>
+			<a-entity id="myCursor" cursor="fuse:true; fuse-timeout: 1000"
+						position="0 0 -0.1"
+						geometry="primitive:ring; radiusInner: 0.001; radiusOuter: 0.0015"
+						material="color: #2E3A87; opacity:0.3;">          
+			</a-entity>
+		</ar-camera>
+		<a-entity id="geo" visible="false">
+
+      <ar-geopose id="GT" lla="-84.394539 33.772501" userotation="false"> 
+         <a-entity fixedsize="20" billboard>
+           <a-plane rotation="0 0 0" width="2.9" height="4" src="#buzzpin" transparent="true" ></a-plane>
+           <a-entity css-object="div: #gtdiv" scale="0.02 0.02 0.02" position="0 4 0" showdistance="Tech Tower @ Georgia Tech<br>Atlanta, GA, USA<br>It is "></a-entity>
+        </a-entity>
+      </ar-geopose>
+      <ar-geopose id="London" lla="-0.076057 51.507953" userotation="false"> 
+         <a-entity fixedsize="20" billboard>
+           <a-entity css-object="div: #londonpin" scale="0.05 0.05 0.05" position="0 0 0"></a-entity>
+           <a-entity css-object="div: #londondiv" scale="0.02 0.02 0.02" position="0 3 0" showdistance="The Tower of London<br>London, England<br>It is "></a-entity>
+        </a-entity>
+      </ar-geopose>
+      <ar-geopose id="Sydney" lla="151.215286 -33.856900" userotation="false"> 
+         <a-entity fixedsize="20" billboard>
+           <a-entity css-object="div: #sydneypin" scale="0.05 0.05 0.05" position="0 0 0"></a-entity>
+           <a-entity css-object="div: #sydneydiv" scale="0.02 0.02 0.02" position="0 3 0" showdistance="Sydney Opera House<br>Sydney, Australia<br>It is "></a-entity>
+        </a-entity>
+      </ar-geopose>
+      <ar-geopose id="Tokyo" lla=" 139.752797 35.685138" userotation="false"> 
+         <a-entity fixedsize="20" billboard>
+           <a-entity css-object="div: #tokyopin" scale="0.05 0.05 0.05" position="0 0 0"></a-entity>
+           <a-entity css-object="div: #tokyodiv" scale="0.02 0.02 0.02" position="0 3 0" showdistance="Imperial Palace<br>Tokyo, Japan<br>It is "></a-entity>
+        </a-entity>
+      </ar-geopose>
+	  </a-entity>	
+	  <a-light type=ambient color="#BBB"></a-light>
+	  <a-light color="#fff" intensity=0.6 position="-0.5 1 1"></a-light>	
+		</ar-scene>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
+
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: false,
+				progress: true,
 				history: true,
+				center: true,
+				overview: false,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
 		</script>
+		<script src="app.js"></script>
+
 	</body>
 </html>

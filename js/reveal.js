@@ -2159,12 +2159,14 @@
 			document.documentElement.classList.add( state[i] );
 
 			// Dispatch custom event matching the state's name
-			dispatchEvent( state[i] );
+			dispatchEvent( state[i], {active: true} );
 		}
 
 		// Clean up the remains of the previous state
 		while( stateBefore.length ) {
-			document.documentElement.classList.remove( stateBefore.pop() );
+			var oldState = stateBefore.pop();
+			dispatchEvent( oldState, {active: false} );
+			document.documentElement.classList.remove( oldState );
 		}
 
 		// Update the overview if it's currently active
