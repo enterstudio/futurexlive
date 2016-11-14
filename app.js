@@ -57,13 +57,12 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 // be applied as a class on the document element when that slide is opened.
 // Furthermore you can also listen to these changes in state via JavaScript:
 
-
 Reveal.addEventListener( 'argonslide', function( event ) {
 	// event.active
     if (event.active) {
-        document.body.setAttribute('background-color', 'transparent');
+        document.body.style.backgroundColor = "transparent";
     } else {
-        document.body.setAttribute('background-color', 'black');
+        document.body.style.backgroundColor = "black";
     }
 } );
 
